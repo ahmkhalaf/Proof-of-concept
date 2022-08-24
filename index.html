@@ -1,0 +1,21 @@
+﻿{% extends "_layout.html" %}
+{% block title %}Home page{% endblock %}
+{% block content %}
+<a href="login">Login</a>
+<p>
+
+</p>
+<a href="create">Add new Show</a>
+
+<table class="table">
+    {% for row in user %}
+    <tr>
+        <td><a href="student?idusers={{ row.idShows }}">{{ row.idShows }}</a></td>
+        <td>{{ row.ShowName }}</td>
+        <td>{{ row.ShowDescription }}</td>
+        <td><a href="delete?idusers={{ row.idShows }}">delete</a></td>
+        <td><a href="update?idusers={{ row.idShows }}">update</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

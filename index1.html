@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <table>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.Surname }}</td>
+            <td>{{ user.FirstName }}</td>
+            <td>{{ user.UserName }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
